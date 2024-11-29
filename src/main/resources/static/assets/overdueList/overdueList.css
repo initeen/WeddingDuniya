@@ -1,0 +1,98 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    /* Increased padding for taller cells */
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.deposit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.disable-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.form-table {
+    width: 100%;
+}
+
+.form-table td {
+    border: none;
+    padding: 12px;
+    /* Increased padding for taller cells */
+    text-align: left;
+}
+
+.center-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* Add margin to separate buttons from form fields */
+}
+
+.deposit-button,
+.cancel-button {
+    margin: 0 10px;
+    /* Add margin between buttons if desired */
+}
+
+.two-column-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-column-form .form-table {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.print-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 8px 16px; /* Padding around text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+}

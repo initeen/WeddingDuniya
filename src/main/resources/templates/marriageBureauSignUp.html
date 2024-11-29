@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage_Bureau_SignUp</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/other/style.css" />
+    <!-- IconsCout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/assets/marriageBureauSignUp/marriageBureauSignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms1">
+            <div class="form">
+                <span class="title">Registration</span>
+                 <form action="#" th:action="@{/createBureau}" th:object="${bureau}" method="post">
+                    <!-- first row-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Owner name" name="ownerName" >
+                                <i class="uil uil-user"></i>
+                            </div>
+                            <div class="error-message" id="error-message-name" style="color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Marraige bureau name" name="marriageBureauName">
+                                <i class="fa fa-university" aria-hidden="true"></i>
+                            </div>
+                            <div class="error-message" id="error-message-marraigebureauName" style="color: red;"></div>
+                        </div>
+                    </div>
+                     <!-- second row-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Marriage bureau email" name="marriageBureauEmail">
+                                <i class="uil uil-envelope icon"></i>
+                            </div>
+                            <div class="error-message" id="error-message-email" style="color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Contact number" id="contactNumber" name="mbContactNumber">
+                                <i class="fa fa-phone" aria-hidden="true"></i><br>
+                            </div>
+                            <div class="error-message" id="error-message-contactNumber" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- third row -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Country" id="Country" name="mbCountry">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="error-message" id="error-message-country" style=" color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="State" id="State" name="mbState">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="error-message" id="error-message-state" style=" color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- fourth row -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="City" id="city" name="mbCity">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="error-message" id="error-message-city" style=" color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Pincode" id="Pincode" name="pincode">
+                                <i class="fa fa-map-pin" aria-hidden="true"></i>
+                            </div>
+                            <div class="error-message" id="error-message-Pincode" style=" color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- fifth row -->
+                    <div class="login-signup">
+                        <input type="checkbox" id="">
+                        <span class="text">I accepted all 
+                            <a href="#" class="text login-link">terms</a>  and  <a href="#" class="text login-link">conditions</a>
+                            <div class="error-message" id="error-message-termCon" style=" color: red;"></div>
+                        </span>
+                    </div>
+                    <!-- sixth row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-field button">
+                                <a href="#">
+                                    <input type="submit" value="SignUp">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-signup">
+                        <span class="text">Already a member?
+                            <a href="/login.html" th:href="@{/signin}" class="text login-link">Login Now</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+         </div>
+    </div>
+    
+ <script src="/assets/marriageBureauSignUp/marriageBureauSignUp.js"></script>
+ 
+</body>  
+
+</html>

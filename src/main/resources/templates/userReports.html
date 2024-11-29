@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+
+<head>
+<meta charset="UTF-8">
+<title>User Reports</title>
+</head>
+<body>
+
+ <!-- main content-->
+    <section class="home-section">
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>/
+                <a href="/settings.html"> Settings </a>
+                / Users Reports
+            </div>
+
+            <div class="overview-boxes">
+
+                <div class="col-xl-12 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="header-text"><b>Users Reports</b></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <!-- Title before Search Box -->
+                        <div class="search-title">
+                            <h6>Search Reports :</h6>
+                        </div>
+
+                        <div class="col-xl-12 col-md-8">
+                            <div class="row">
+                                <div class="col-4">
+                                    <select id="locationSelect">
+                                        <option value="all">All Locations</option>
+                                        <option value="location1">Location 1</option>
+                                        <option value="location2">Location 2</option>
+                                        <!-- Add more locations as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select id="marriageBureauSelect">
+                                        <option value="all">All Marriage Bureaus</option>
+                                        <option value="bureau1">Marriage Bureau 1</option>
+                                        <option value="bureau2">Marriage Bureau 2</option>
+                                        <!-- Add more marriage bureaus as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select id="marriageBureauBranchSelect">
+                                        <option value="all">All Branch</option>
+                                        <option value="bureau1">LetsConnect Pune</option>
+                                        <option value="bureau2">LetsConnect Mumbai</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <select id="statusSelect">
+                                        <option value="all">All Status</option>
+                                        <option value="single">Active</option>
+                                        <option value="married">Deactive</option>
+                                        <option value="divorced">Blocked</option>
+                                        <!-- Add more statuses as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select id="genderSelect">
+                                        <option value="all">All Genders</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <!-- Add more genders as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select id="reportSelect-user">
+                                        <option value="all">All Reports</option>
+                                        <option value="monthlyReports">Monthly Reports</option>
+                                        <option value="yearlyReports">Yearly Reports</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="getReportBtn">
+                                        <button id="getReportButton" class="btn btn-primary" type="button"
+                                            onclick="getUserReport()">Get Report</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Table to display the report data -->
+                            <div class="table-responsive mt-4">
+                                <table id="reportTable" class="table table-bordered">
+
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>User Name</th>
+                                            <th>Status</th>
+                                            <th>Location</th>
+                                            <th>Contact Number</th>
+                                            <th>User Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="reportTableBody">
+                                        <!-- Table body content will be populated dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Export Data Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-danger" onclick="exportToPdf()">Export to PDF</button>
+                                <button class="btn btn-success ml-2" onclick="exportToExcel()">Export to Excel</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

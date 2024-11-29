@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8" />
+<title>Home</title>
+</head>
+<body>
+
+	<!-- main content-->
+	<section class="home-section">
+		<div class="home-content">
+			<div class="overview-boxes">
+				<!-- flex-box 1 -->
+				<div class="col-md-12 col-xl-4">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_total.png" alt="">
+								</div>
+								<div class="col text-right">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/allMarriageBureaus.html">Total MBs</a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="card-block">
+							<div
+								class="row align-items-center justify-content-center card-active">
+								<div class="col-4">
+									<h6 class="text-center m-b-10">
+										<span class="text-muted"><a
+											href="/activeMarriageBureaus.html">Active </a></span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role="progressbar"
+											style="width: 100%; height: 6px; background-color: #64E986;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="col-4">
+									<h6 class="text-center  m-b-10">
+										<span class="text-muted"><a
+											href="/deactiveMarriageBureaus.html">Deactive</a></span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role=""
+											style="width: 100%; height: 6px; background-color: #A9A9A9;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="col-4">
+									<h6 class="text-center m-b-10">
+										<span class="text-muted"> <a
+											href="/blockedMarriageBureaus.html">Blocked</a>
+										</span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role=""
+											style="width: 100%; height: 6px; background-color: #DC381F;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flex-box-1 -->
+				<!-- flex-box-2 -->
+				<div class="col-md-12 col-xl-4">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/user_total.png" alt="">
+								</div>
+								<div class="col text-right">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a href="/allUsers.html">Total
+												Users</a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="card-block">
+							<div
+								class="row align-items-center justify-content-center card-active">
+								<div class="col-4">
+									<h6 class="text-center m-b-10">
+										<span class="text-muted "><a href="/activeUsers.html">Active</a></span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role="progressbar"
+											style="width: 100%; height: 6px; background-color: #64E986;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="col-4">
+									<h6 class="text-center  m-b-10">
+										<span class="text-muted"><a href="/deactiveUsers.html">Deactive</a></span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role=""
+											style="width: 100%; height: 6px; background-color: #A9A9A9;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="col-4">
+									<h6 class="text-center m-b-10">
+										<span class="text-muted"> <a href="/blockedUsers.html">Blocked</a>
+										</span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role=""
+											style="width: 100%; height: 6px; background-color: #DC381F;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flex-box-2 -->
+				<!-- flex-box-3 -->
+				<div class="col-md-12 col-xl-4">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/wallet.png" alt="">
+								</div>
+								<div class="col text-right">
+									<h3>&#8377; 12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a href="/overdueList.html"
+											th:href="@{/overdueList}">Overdue MBs</a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="card-block">
+							<div
+								class="row align-items-center justify-content-center card-active">
+								<div class="col-12">
+									<h6 class="text-center m-b-10">
+										<span class="text-muted m-r-5"><a
+											href="/paymentHistory.html" th:href="@{/paymentHistory}">Payment
+												History</a></span>
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-c" role="progressbar"
+											style="width: 100%; height: 6px; background-color: #DC381F;"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flex-box-3 -->
+			</div>
+			<!-- New registration approvals start-->
+			<div class="col-xl-12 col-md-8">
+				<div class="card Recent-Users">
+					<div class="card-header">
+						<h5>
+							<b>New Registration Approvals</b>
+						</h5>
+					</div>
+					<div class="card-block px-0 py-3" style="margin-top: -16px;">
+						<div class="table-responsive"
+							style="max-height: 500px; overflow-y: auto;">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Profile</th>
+										<th>Name</th>
+										<th>Location</th>
+										<th>Date - Time</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- for MB approval -->
+									<tr class="unread" th:each="approval : ${pendingApprovals}">
+										<td><img class="rounded-circle" style="width: 40px;"
+											src="/assets/images/user.jpg" alt="activity-user"></td>
+										<td>
+											<h6 class="mb-1" style="cursor: pointer;"
+												onclick="openModal()"
+												th:text="${approval.marriageBureauName}">Miss Ninja</h6>
+										</td>
+										<div id="modal">
+											<form>
+												<div class="row">
+													<div class="col-4">
+														<label for="ownerName">Owner Name </label>
+													</div>
+													<div class="col-8" th:text="${approval.ownerName}">
+														<input type="text" id="ownerName" name="ownerName"
+															value="Owner Name" readonly required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="marriageBureauName">Marriage Bureau
+															Name</label>
+													</div>
+													<div class="col-8" th:text="${approval.marriageBureauName}">
+														<input type="text" id="marriageBureauName"
+															name="marriageBureauName" value="Demo MB" required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="marriageBureauEmail">Marriage Bureau
+															Email</label>
+													</div>
+													<div class="col-8"
+														th:text="${approval.marriageBureauEmail}">
+														<input type="email" id="marriageBureauEmail"
+															name="marriageBureauEmail" value="mb@gmail.com" readonly
+															required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="contactNumber">Contact Number</label>
+													</div>
+													<div class="col-8" th:text="${approval.mbContactNumber}">
+														<input type="tel" id="contactNumber" name="contactNumber"
+															value="1234567890" readonly required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="country">Country</label>
+													</div>
+													<div class="col-8" th:text="${approval.mbCountry}">
+														<input type="text" id="country" name="country"
+															value="India" readonly required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="state">State</label>
+													</div>
+													<div class="col-8" th:text="${approval.mbState}">
+														<input type="text" id="state" name="state"
+															value="Maharashtra" readonly required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="city">City</label>
+													</div>
+													<div class="col-8" th:text="${approval.mbCity}">
+														<input type="text" id="city" name="city" value="Mumbai"
+															readonly required>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-4">
+														<label for="pincode">Pincode</label>
+													</div>
+													<div class="col-8" th:text="${approval.pincode}">
+														<input type="text" id="pincode" name="pincode"
+															value="400-005" readonly required>
+													</div>
+												</div>
+												<div style="text-align: center;">
+													<button type="button" class="btn btn-secondary"
+														onclick="closeModal()">Back</button>
+												</div>
+
+											</form>
+										</div>
+										<td>
+											<h6 class="m-0" th:text="${approval.mbCity}">From ABC
+												Marriage Bureau</h6>
+										</td>
+										<td>
+
+											<h6 class="text-muted"
+												th:text="${approval.bureauRegistrationTime}">
+												<i class="fas fa-circle text-c-green f-10 m-r-15"></i>11 MAY
+												12:56
+											</h6>
+										</td>
+										<td>
+											<form th:action="@{/processRegistration}" method="post">
+												<input type="hidden" name="bureau_id"
+													th:value="${approval.bureau_id}" />
+												<button class="label theme-bg2 text-white f-12"
+													type="submit" name="action" value="reject">Reject</button>
+												<button class="label theme-bg text-white f-12" type="submit"
+													name="action" value="approve">Approve</button>
+											</form>
+
+										</td>
+
+									</tr>
+									<!-- MB approval end here -->
+									
+									<!-- for user approval -->
+									
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- new registration approvals end-->
+		</div>
+	</section>
+	<!-- end main content -->
+
+</body>
+
+</html>

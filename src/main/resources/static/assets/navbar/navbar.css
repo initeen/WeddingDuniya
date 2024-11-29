@@ -1,0 +1,87 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #0A2558;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the profile dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.profile-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0A2558;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #181444;
+    color: #fff;
+}
+
+.messages-icon {
+    font-size: 24px; /* Adjust the font size to your preference */
+    margin-left: 720px; /* Move the icon slightly to the left */
+  }
+  

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Bureau DashBoard</h1>
+
+	<th:block th:if="${session.msg}">
+		<p class="text-center fs-4 " style="color: red; text-align: center;">[[${session.msg}]]</p>
+		<th:block th:text="${@sessionHelper.removeMsgFromSession()}"></th:block>
+	</th:block>
+
+	<form th:action="@{/logout}" method="post">
+		<button type="submit">Logout</button>
+	</form>
+
+</body>
+</html>

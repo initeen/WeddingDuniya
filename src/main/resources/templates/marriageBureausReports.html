@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+	
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <!-- main content-->
+    <section class="home-section">
+       
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>/
+                <a href="/settings.html"> Settings</a>
+                / Marriage Bureaus Reports
+            </div>
+
+            <div class="overview-boxes">
+                <div class="col-xl-12 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="header-text"><b>Marriage Bureaus Reports</b></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <!-- Title before Search Box -->
+                        <div class="search-title">
+                            <h6>Search Reports </h6>
+                        </div>
+
+                        <div class="col-xl-12 col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <select id="locationSelect">
+                                        <option value="all">All Locations</option>
+                                        <option value="location1">Location 1</option>
+                                        <option value="location2">Location 2</option>
+                                        <!-- Add more locations as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select id="overdueMarraigeBeuros">
+                                        <option value="all">Overdue Marraige Bureaus</option>
+                                        <option value="">Yes</option>
+                                        <option value="">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select id="statusSelect">
+                                        <option value="all">All Status</option>
+                                        <option value="">Active</option>
+                                        <option value="">Deactive</option>
+                                        <option value="">Blocked</option>
+                                        <!-- Add more statuses as needed -->
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select id="mbreportSelect">
+                                        <option value="all">All Reports</option>
+                                        <option value="monthlyReports">Monthly Reports</option>
+                                        <option value="yearlyReports">Yearly Reports</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="getReportBtn">
+                                        <button id="getReportBtn" class="btn btn-primary" type="button"
+                                            onclick="getMarriageBureauReport()">Get Report</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive mt-4">
+                                <!-- The table will be appended here -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Marriage Bureau Name</th>
+                                            <th>Status</th>
+                                            <th>Location</th>
+                                            <th>Contact Number</th>
+                                            <th>Marriage Bureau Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="reportTableBody">
+                                        <!-- Table rows will be appended here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Export Data Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-danger" onclick="exportToPdf()">Export to PDF</button>
+                                <button class="btn btn-success ml-2" onclick="exportToExcel()">Export to Excel</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+  </div>
+
+    </section>
+
+</body>
+</html>

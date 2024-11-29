@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+	
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+</head>
+<body>
+
+<!-- main content-->
+  <section class="home-section">
+    
+    <div class="home-content">
+
+      <div class="page-navigation">
+        <a href="/home.html">Home </a>
+        / Profile
+      </div>
+
+      <div class="overview-boxes">
+        <!--[ Recent Users ] start-->
+        <div class="col-xl-12 col-md-8">
+          <!-- <div class="card Recent-Users"> -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="header-text"><b>Profile</b></h5>
+
+            </div>
+            <!-- <div class="row"> -->
+            <!-- <div class="col-xl-12 col-md-8"> -->
+          </div>
+        </div>
+        <!-- user image and designation -->
+        <!-- Profile details -->
+        <div class="col-xl-12 col-md-8">
+          <div class="card">
+            <img src="/assets/images/user_3.jpg" class="card-img-top rounded-circle mx-auto"
+              style="width: 100px; padding-top: 15px;" alt="User Image">
+
+            <div class="card-body text-center">
+              <h5 class="card-title">Mr. Test</h5>
+              <p class="card-text">Super Admin</p>
+            </div>
+
+            <div class="card-body text-center" style="padding-left: 0px;">
+              <!-- Tabs -->
+              <ul class="nav nav-tabs" id="myTabs" style="padding-left: 0px;">
+                <li class="nav-item">
+                  <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="edit-profile-tab" data-toggle="tab" href="#edit-profile">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password">Change
+                    Password</a>
+                </li>
+              </ul>
+
+              <!-- Tab Content -->
+              <div class="tab-content mt-3" style="box-shadow: none;">
+                <div class="tab-pane fade show active" id="overview">
+                  <!-- Overview Content Goes Here -->
+                  <h5 class="card-title" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;Profile Details</h5>
+
+                  <!-- Existing data from the server -->
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full
+                      Name</div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="fullName">Test</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="company">ConnectLife</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designation</div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="designation">Super Admin</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="gender">Male</div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="contact">8765437876</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="email">test@test.com</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="address">Test/100</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aadhar Number
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="aadharNumber">123456789098</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pan Number
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="panNumber">ABCDE1234F</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank Account number
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="bankAccountNumber">123456789098</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFSC Code
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="ifscCode">ABC0001234</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 label" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emergency Contact No.
+                    </div>
+                    <div class="col-lg-4 col-md-3" style="text-align: left;" id="emergencyContactNumber">1234567890</div>
+                  </div>
+
+                  <!-- <button class="btn btn-primary" onclick="editProfile()">Edit Profile</button> -->
+                </div>
+
+                <!-- edit profile tab -->
+                <div class="tab-pane fade" id="edit-profile">
+                  <!-- Edit Profile Content Goes Here -->
+                  <h5 class="card-title" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;Edit Profile</h5>
+
+                  <!-- Editable form -->
+                  <form id="editProfileForm">
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editProfileImage"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profile
+                        Image</label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="file" class="form-control-file" id="editProfileImage" accept="image/*">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editFullName"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Name<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editFullName" value="Test">
+                        <span id="errorFullName" style="color: red;"></span>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editCompany"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company</label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editCompany" value="ConnectLife" readonly>
+                        <span id="readOnlyMessage" style="color: red;"></span>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editDesignation"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designation</label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editDesignation" value="Super Admin" readonly>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editgender"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editgender" value="Male">
+                        <span id="editgenderError" style="color: red;"></span> <!-- Error message placeholder -->
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editContact"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editContact" value="8765437876">
+                        <span id="editContactError" style="color: red;"></span> <!-- Error message placeholder -->
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editEmail"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="email" class="form-control" id="editEmail" value="test@test.com">
+                        <span id="emailError" style="color: red;"></span> <!-- Error message placeholder -->
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editAddress"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editAddress" value="Test/100">
+                        <span id="editaddressError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editAadharnumber"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aadhar Number<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editAadharnumber" value="123456789087">
+                        <span id="editaadharError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editpannumber"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pan Number<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editpannumber" value="ABCDE1234F">
+                        <span id="editpannumberError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editbnkaccn"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bank Account Number<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editbnkaccn" value="123456789098">
+                        <span id="editbnkaccnError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editifsc"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFSC Code<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editifsc" value="ABC000123">
+                        <span id="editifscError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-3 label" for="editemcntnb"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emergency Contact No.<span
+                          style="color: red;"> *</span></label>
+                      <div class="col-lg-4 col-md-3">
+                        <input type="text" class="form-control" id="editemcntnb" value="1234567890">
+                        <span id="editemcntnbError" style="color: red;"></span> <!-- Error message placeholder -->
+                       </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <div class="col-lg-6 col-md-6">
+                        <button type="button" class="btn btn-primary" onclick="saveProfileChanges()">Save
+                          Changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- end edit profile tab-->
+
+
+                <!-- change password -->
+                <!-- Change Password Content Goes Here -->
+                <div class="tab-pane fade" id="change-password">
+                  <!-- Change Password Content Goes Here -->
+                  <h5 class="card-title" style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Change Password</h5>
+
+                  <!-- Change Password Form -->
+                  <form id="changePasswordForm">
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-4 label" for="currentPassword"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current
+                        Password<span style="color: red;"> *</span></label>
+                      <div class="col-lg-6 col-md-8">
+                        <input type="password" class="form-control" id="currentPassword" required>
+                        <span id="errorCurrentPassword" style="color: red;display: none;"> Current password
+                          required</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-4 label" for="newPassword"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New
+                        Password<span style="color: red;"> *</span></label>
+                      <div class="col-lg-6 col-md-8">
+                        <input type="password" class="form-control" id="newPassword" required>
+                        <span id="errorNewPassword" style="color: red;display: none;">New password required</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-md-4 label" for="confirmNewPassword"
+                        style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Re-enter New
+                        Password<span style="color: red;"> *</span></label>
+                      <div class="col-lg-6 col-md-8">
+                        <input type="password" class="form-control" id="confirmNewPassword" required>
+                        <span id="errorConfirmPassword" style="color: red;display: none;">Passwords do not match</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <div class="col-lg-6 col-md-6">
+                        <button type="button" class="btn btn-primary" onclick="changePassword()">Change
+                          Password</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <!-- end changes password -->
+
+
+            </div>
+          </div>
+        </div>
+        <!-- End profile details -->
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title>Blocked Marriage Bureaus</title>
+</head>
+<body>
+
+	<!-- main content-->
+	<section class="home-section">
+
+		<!-- activeMb CSS-->
+		<link rel="stylesheet"
+			href="/assets/blockedMarriageBureaus/blockedMarriageBureaus.css"
+			th:href="@{/assets/blockedMarriageBureaus/blockedMarriageBureaus.css}">
+
+		<div class="home-content">
+
+			<div class="page-navigation">
+				<a href="/home.html">Home </a> / Blocked Marriage Bureaus
+			</div>
+
+			<div class="overview-boxes">
+				<!-- marraige beuros stats-->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_total.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/allMarriageBureaus.html"
+											th:href="@{/allMarriageBureaus}">Total </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_active.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/activeMarriageBureaus.html"
+											th:href="@{/activeMarriageBureaus}">Active </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_deactive.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/deactiveMarriageBureaus.html"
+											th:href="@{/deactiveMarriageBureaus}">Deactive </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_blocked.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/blockedMarriageBureaus.html"
+											th:href="@{/blockedMarriageBureaus}">Blocked </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- end stats-->
+				<!--[ Recent Users ] start-->
+				<div class="col-xl-12 col-md-8">
+					<div class="card Recent-Users">
+						<div class="card-header">
+							<h5>
+								<b>Blocked Marriage Bureaus</b>
+							</h5>
+						</div>
+
+						<!-- searchbar-->
+						<div class="col-xl-12 col-md-8">
+							<!-- <div class="card Recent-Users"> -->
+							<div class="s002">
+								<form>
+									<div class="inner-form">
+										<div class="input-field first-wrap">
+											<div class="icon-wrap">
+												<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                    </svg> -->
+												<img
+													src="/assets/images/bxs+user+badge-1325051987095801102.svg"
+													alt="">
+											</div>
+											<input id="search" type="text"
+												placeholder="Enter marriage bureau name" />
+										</div>
+										<div class="input-field fouth-wrap">
+											<div class="icon-wrap">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24"
+													height="24" viewBox="0 0 24 24">
+                          <path
+														d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                          </path>
+                        </svg>
+											</div>
+											<select data-trigger="" name="choices-single-defaul">
+												<option placeholder="">Location</option>
+												<option>Mumbai</option>
+												<option>Nagpur</option>
+												<option>Nashik</option>
+												<option>Pune</option>
+											</select>
+										</div>
+										<div class="input-field fifth-wrap">
+											<button class="btn-search" type="button">SEARCH</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+
+						</div>
+						<!-- end searchbar-->
+
+						<!--Data table-->
+
+						<div class="col-xl-12 col-md-8">
+							<div class="table-responsive">
+								<div class="table-wrapper">
+
+									<table class="table table-striped table-hover">
+										<thead>
+											<tr>
+												<th>SL</th>
+												<th>Marriage Bureau Name</th>
+												<!-- <th>Status</th> -->
+												<th>Location</th>
+												<!-- <th>Visit to Portal</th> -->
+												<th>Contact Number</th>
+												<th>Marriage Bureau email</th>
+												<th>View Profile</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr data-status="expired">
+												<td>1</td>
+												<td><a href="#">phasellusri.org</a></td>
+												<!-- <td><span class="label label-danger">Blocked</span></td> -->
+												<td>Romania</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff;">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													class="btn btn-sm manage" style="color: #007bff;">Manage</a></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<p id="page-numbers"></p>
+									<div class="pagination" id="pagination">
+
+										<a href="#" id="prev">Previous</a> <a href="#"
+											class="page-link" data-page="1">1</a> <a href="#"
+											class="page-link" data-page="2">2</a> <a href="#"
+											class="page-link" data-page="3">3</a> <a href="#"
+											class="page-link" data-page="4">4</a> <a href="#"
+											class="page-link" data-page="5">5</a> <a href="#"
+											class="page-link" data-page="6">6</a> <a href="#" id="next">Next</a>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+
+						<!--Data table-->
+						<!-- Pagination -->
+
+
+
+
+
+						<!-- End pagination -->
+					</div>
+				</div>
+
+			</div>
+			<!--[ Recent Users ] end-->
+		</div>
+
+	</section>
+
+
+</body>
+</html>

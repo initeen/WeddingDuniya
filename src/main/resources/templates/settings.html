@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8" />
+<title>Settings</title>
+</head>
+
+<body>
+
+	<!-- main content-->
+	<section class="home-section">
+		<div class="home-content">
+
+			<div class="page-navigation">
+				<a href="/home.html" th:href="@{/home}">Home </a> / Settings
+			</div>
+
+			<div class="overview-boxes">
+
+				<div class="col-xl-12 col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="header-text">
+								<b>Settings</b>
+							</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-12 col-md-8">
+					<div class="card Recent-Users">
+						<div class="card-header">
+							<div class="col-xl-12 col-md-8">
+							
+								<div class="row">
+									<div class="col-4">
+										<a href="/designations.html" th:href="@{/designations}" id="" class="button"> <span
+											class="btn btn-primary">Designations</span>
+										</a>
+									</div>
+									<div class="col-4">
+										<a href="/usersReports.html" th:href="@{/userReports}" id="" class="button"> <span
+											class="btn btn-primary">Users Reports</span>
+										</a>
+									</div>
+									<div class="col-4">
+										<a href="/paymentReports.html" th:href="@{/paymentReports}" id="" class="button"> <span
+											class="btn btn-primary">Payment Reports</span>
+										</a>
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-4">
+										<a href="/marriageBureausReports.html" th:href="@{/marriageBureausReports}" id="" class="button">
+											<span class="btn btn-primary">Marraige Bureaus Reports</span>
+										</a>
+									</div>
+									<div class="col-4">
+										<a href="/policy-privacy.html" th:href="@{/policy-privacy}" id="" class="button"> <span
+											class="btn btn-primary">Policy & Privacy</span>
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

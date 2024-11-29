@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+
+<head>
+<meta charset="UTF-8" />
+<title>Home</title>
+<link rel="stylesheet" href="/assets/css/style.css"
+	th:href="@{/assets/css/style.css}" />
+<link rel="stylesheet" href="/assets/other/style.css"
+	th:href="@{/assets/other/style.css}" />
+<link rel="stylesheet" href="/assets/navbar/navbar.css"
+	th:href="@{/assets/navbar/navbar.css}" />
+<link rel="stylesheet" href="/assets/home/style.css"
+	th:href="@{/assets/home/style.css}" />
+<!-- Box icons CDN Link -->
+<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+	th:href="@{https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css}"
+	rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- font awesome icon -->
+<link rel="stylesheet"
+	href="/assets/fonts/fontawesome/css/fontawesome-all.min.css"
+	th:href="@{/assets/fonts/fontawesome/css/fontawesome-all.min.css}">
+<!-- animation CSS -->
+<link rel="stylesheet"
+	href="/assets/plugins/animation/css/animate.min.css"
+	th:href="@{/assets/plugins/animation/css/animate.min.css}" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}" />
+	
+	<!-- allMb CSS-->
+  <link rel="stylesheet" href="/assets/allMarriageBureaus/allMarriageBureaus.css">
+
+  <!--all pagination css-->
+  <link rel="stylesheet" href="/assets/allMarriageBureaus/allMarriageBureausPagination.css">
+	
+	 <!-- activeMb CSS-->
+  <link rel="stylesheet" href="/assets/activeMarriageBureaus/activeMarriageBureaus.css">
+  <!--all pagination css-->
+  <link rel="stylesheet" href="/assets/activeMarriageBureaus/activeMarriageBureausPagination.css">
+  
+    <!-- activeMb CSS-->
+  <link rel="stylesheet" href="/assets/deactiveMarriageBureaus/deactiveMarriageBureaus.css">
+  <!--all pagination css-->
+  <link rel="stylesheet" href="/assets/deactiveMarriageBureaus/deactiveMarriageBureausPagination.css">
+  
+    <!-- activeMb CSS-->
+  <link rel="stylesheet" href="/assets/blockedMarriageBureaus/blockedMarriageBureaus.css">
+  <!--all pagination css-->
+  <link rel="stylesheet" href="/assets/blockedMarriageBureaus/blockedMarriageBureausPagination.css">
+  <!---->
+	
+	 <!-- allUsers CSS-->
+    <link rel="stylesheet" href="/assets/allUsers/allUsers.css">
+    <!-- <link rel="stylesheet" href="/allMb/customeAllMB.css"> -->
+    <!--all Users pagination css-->
+    <link rel="stylesheet" href="/assets/allUsers/allUsersPagination.css">
+  
+
+<!-- profile CSS optional -->
+  <link rel="stylesheet" href="/assets/profile/assets/profile.css">
+
+  
+   <!-- css for reports -->
+    <link rel="stylesheet" href="/assets/settings/reports.css">
+     
+     <!-- css for policy-privacy -->
+    <link rel="stylesheet" href="/assets/settings/policy-privacy.css">
+    
+     <link rel="stylesheet" href="/assets/settings/designations.css">
+     
+      <!-- css for messages -->
+    <link rel="stylesheet" href="/assets/messages/messages.css">
+    
+    <!-- overdue list css-->
+    <!-- <link rel="stylesheet" href="/assets/overdueList/overdueList.css"> -->
+    
+     <!-- payment history css -->
+ <!--  <link rel="stylesheet" href="/assets/paymentHistory/paymentHistory.css"> -->
+ 
+  
+</head>
+
+<body>
+
+	<!-- side bar -->
+	<div class="sidebar active">
+		<div class="logo-details">
+			<i class="" data-toggle="tooltip" data-placement="right"
+				title="Wedding Duniya"><img width="40" height="40"
+				src="https://img.icons8.com/ios-filled/50/FFFFFF/workday.png"
+				alt="workday" /></i> <a href="/home.html" class="logo_name"
+				th:href="@{/home}">Wedding Duniya</a>
+		</div>
+		<ul class="nav-links">
+			<li><a href="/home.html" th:href="@{/adminHome}"> <i
+					class='bx bx-grid-alt' data-toggle="tooltip" data-placement="right"
+					title="Home"> </i> <span class="links_name">Home</span>
+			</a></li>
+			<li><a href="/allMarriageBureaus.html" th:href="@{/allMarriageBureaus}"> <i
+					class='bx bxs-user-badge' data-toggle="tooltip"
+					data-placement="right" title="Marriage Bureaus"></i> <span
+					class="links_name">Marriage Bureau</span>
+			</a></li>
+			<li><a href="/allUsers.html" th:href="@{/allUsers}"> <i class='bx bxs-user-account'
+					data-toggle="tooltip" data-placement="right" title="Users"></i> <span
+					class="links_name">Users</span>
+			</a></li>
+			<li><a href="/employees.html" th:href="@{/employees}"> <i class='bx bx-user'
+					data-toggle="tooltip" data-placement="right" title="Employees"></i>
+					<span class="links_name">Employees</span>
+			</a></li>
+			<li><a href="/offer.html" th:href="@{/offer}"> <i class='bx bxs-offer'
+					data-toggle="tooltip" data-placement="right" title="Offers"></i> <span
+					class="links_name">Offers</span>
+			</a></li>
+			<li><a href="/notifications.html" th:href="@{/notifications}"> <i class="bx bx-bell"
+					data-toggle="tooltip" data-placement="right" title="Notifications"></i>
+					<span class="links_name">Notifications</span>
+			</a></li>
+			<li><a href="/profile.html" th:href="@{/profile}"> <i class='bx bxs-id-card'
+					data-toggle="tooltip" data-placement="right" title="Profile"></i> <span
+					class="links_name">Profile</span>
+			</a></li>
+			<li><a href="/settings.html" th:href="@{/settings}"> <i class="bx bx-cog"
+					data-toggle="tooltip" data-placement="right" title="Settings"></i>
+					<span class="links_name">Settings</span>
+			</a></li>
+			<li class="log_out"><a href="#" id="logoutButton"> <i
+					class="bx bx-log-out" data-toggle="tooltip" data-placement="right"
+					title="Logout"></i> <span class="links_name">Logout</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- end side bar -->
+
+	<!-- Nav-bar -->
+	<div class="home-section">
+		<nav class="navbar">
+			<div class="sidebar-button">
+				<i class="bx bx-menu sidebarBtn"></i>
+			</div>
+			<a href="/messages.html" th:href="@{/messages}" class="messages-icon">
+				<div class="icon-badge-container">
+					<i class="far fa-envelope icon-badge-icon" data-toggle="tooltip"
+						data-placement="right" title="Messages"></i>
+					<div class="icon-badge">6</div>
+				</div>
+			</a>
+		</nav>
+	</div>
+	<!-- end nav-bar -->
+
+	<!-- start content -->
+	<div th:replace="${content}"></div>
+	<!-- end content -->
+
+	<!-- footer -->
+	<div class="common-footer">
+		&copy; Copyright <strong><span>WeddingDuniya</span></strong>. All
+		Rights Reserved
+		<p>
+			Designed by <a href="/home.html" th:href="@{/home}">WeddingDuniya</a>
+		</p>
+	</div>
+	<!-- end footer -->
+
+	<!-- logout modal -->
+	<!-- Logout Confirmation Modal -->
+	<div class="modal" id="logoutModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Logout Confirmation</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal Body -->
+				<div class="modal-body">
+					<p>Are you sure you want to logout?</p>
+				</div>
+
+				<!-- Modal Footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Cancel</button>
+					<a href="/login.html" id="confirmLogout" th:href="@{/signin}" class="btn btn-primary">Logout</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- end logout modal -->
+
+	<!-- JS script-->
+	<script src="/assets/other/script.js"
+		th:src="@{/assets/other/script.js}"></script>
+	<script src="/assets/navbar/navbar.js"
+		th:src="@{/assets/navbar/navbar.js}"></script>
+	<script src="/assets/js/vendor-all.min.js"
+		th:src="@{/assets/js/vendor-all.min.js}"></script>
+	<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"
+		th:src="@{/assets/plugins/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- tool tip JS  -->
+	<script src="/assets/events/allEventsPagination.JS"
+		th:src="@{/assets/events/allEventsPagination.JS}"></script>
+	<!-- home JS -->
+	<script src="/assets/home/home.js" th:src="@{/assets/home/home.js}"></script>
+	<!-- for logout script -->
+	<script src="/assets/logout/logout.js"
+		th:src="@{/assets/logout/logout.js}"></script>
+		
+		<!-- allMBJS-->
+  <script src="/assets/allMarriageBureaus/extention/choices.js"></script>
+  <script src="/assets/allMarriageBureaus/extention/flatpickr.js"></script>
+
+  <!-- AllMB JS -->
+  <!--Pagination JS-->
+  <script src="/assets/allMarriageBureaus/allMarriageBureaus.js"></script>
+  <script src="/assets/allMarriageBureaus/allMarriageBureausPagination.JS"></script>
+  <!-- Add new MB js -->
+  <script src="/assets/allMarriageBureaus/addNewMarriageBureau.js"></script>
+	
+	<!-- allMBJS-->
+  <script src="/assets/activeMarriageBureaus/extention/choices.js"></script>
+  <script src="/assets/activeMarriageBureaus/extention/flatpickr.js"></script>
+  <script src="/assets/activeMarriageBureaus/activeMarriageBureaus.js"></script>
+  <!-- AllMB JS -->
+  <!--Pagination JS-->
+  <script src="/assets/activeMarriageBureaus/activeMarriageBureausPagination.js"></script>
+	
+		<!-- allMBJS-->
+  <script src="/assets/deactiveMarriageBureaus/extention/choices.js"></script>
+  <script src="/assets/deactiveMarriageBureaus/extention/flatpickr.js"></script>
+  <script src="/assets/deactiveMarriageBureaus/deactiveMarriageBureaus.js"></script>
+  <script src="/assets/deactiveMarriageBureaus/deactiveMarriageBureausPagination.js"></script>
+
+  <script src="/maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> <!-- optional -->
+  <script src="/cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- allMBJS-->
+  <script src="/assets/blockedMarriageBureaus/extention/choices.js"></script>
+  <script src="/assets/blockedMarriageBureaus/extention/flatpickr.js"></script>
+  <script src="/assets/blockedMarriageBureaus/blockedMarriageBureaus.js"></script>
+  <script src="/assets/blockedMarriageBureaus/blockedMarriageBureausPagination.js"></script>
+  <!-- AllMB JS -->
+  
+ 
+ <!-- allUserJS-->
+    <script src="/assets/allUsers/extention/choices.js"></script>
+    <script src="/assets/allUsers/extention/flatpickr.js"></script>
+    <script src="/assets/allUsers/allUsers.js"></script>
+    <!-- AllUser JS -->
+    <!--Pagination JS-->
+    <script src="/assets/allUsers/addNewUsers.js"></script>
+    <!-- add new user js -->
+    <script src="/assets/allUsers/allUsersPagination.JS"></script>
+ 
+  <script src="/assets/employees/employees.js"></script> 
+
+<!-- offers -->
+<script src="/assets/offers/addNewOffer.js"></script>
+    <script src="/assets/offers/allOffers.js"></script>
+    <script src="/assets/offers/allOffersPagination.JS"></script>
+   <!--  <script src="/pages/offers/allOffers.js"></script> -->  
+    
+    <!-- script for profile -->
+  <script src="/assets/profile/profile.js"></script>
+    
+        <script src="/assets/settings/reports.js"></script>
+   
+    <!-- policy-privacy -->
+    <script src="/assets/settings/policy-privacy.js"></script>
+    
+    <!-- notifications js -->
+    <script src="/assets/notification/notification.js"></script>
+   
+    <script src="/assets/settings/designations.js"></script>
+    
+     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+   
+     <!-- overdue list js-->
+    <script src="/assets/overdueList/overdueList.js"></script>
+    
+     <!-- payment history js -->
+  <!-- <script src="/assets/paymentHistory/paymentHistory.js"></script> -->
+  
+   
+</body>
+
+</html>

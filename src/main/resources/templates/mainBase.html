@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+<head>
+<meta charset="UTF-8">
+<title>WeddingDuniya</title>
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}"
+	rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="/assets/mainPage/assets/vendor/animate.css/animate.min.css"
+	th:href="@{/assets/mainPage/assets/vendor/animate.css/animate.min.css}"
+	rel="stylesheet">
+<link
+	href="/assets/mainPage/assets/vendor/bootstrap/css/bootstrap.min.css"
+	th:href="@{/assets/mainPage/assets/vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+<link
+	href="/assets/mainPage/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+	th:href="@{/assets/mainPage/assets/vendor/bootstrap-icons/bootstrap-icons.css}"
+	rel="stylesheet">
+<link
+	href="/assets/mainPage/assets/vendor/boxicons/css/boxicons.min.css"
+	th:href="@{/assets/mainPage/assets/vendor/boxicons/css/boxicons.min.css}"
+	rel="stylesheet">
+<link
+	href="/assets/mainPage/assets/vendor/glightbox/css/glightbox.min.css"
+	th:href="@{/assets/mainPage/assets/vendor/glightbox/css/glightbox.min.css}"
+	rel="stylesheet">
+<link href="/assets/mainPage/assets/vendor/remixicon/remixicon.css"
+	th:href="@{/assets/mainPage/assets/vendor/remixicon/remixicon.css}"
+	rel="stylesheet">
+<link href="/assets/mainPage/assets/vendor/swiper/swiper-bundle.min.css"
+	th:href="@{/assets/mainPage/assets/vendor/swiper/swiper-bundle.min.css}"
+	rel="stylesheet">
+<!-- WhatsApp chat API -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css}"
+	integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+	href="/assets/mainPage/WhatsApp Chat Integration In Website/style.css"
+	th:href="@{/assets/mainPage/WhatsApp Chat Integration In Website/style.css}">
+<!-- Main CSS File -->
+<link href="/assets/mainPage/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- header -->
+	<header id="header" class="fixed-top d-flex align-items-center">
+		<div class="container d-flex align-items-center">
+			<h1 class="logo me-auto">
+				<a href="/index.html" th:href="@{/index}"><b
+					style="color: #d9232d;">Wedding</b><b>Duniya</b></a>
+			</h1>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href="/index.html" th:href="@{/index}" class="active">Home</a></li>
+					<li><a href="/login.html" th:href="@{/signin}">Login</a></li>
+					<li><a href="/account.html" th:href="@{/account}"
+						class="getstarted">Join Now</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+		</div>
+	</header>
+	<!-- end header -->
+
+	<!-- start content -->
+	<div th:replace="${content}"></div>
+	<!-- end content -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-info">
+							<h3>Wedding Duniya</h3>
+							<p>
+								A108 Adam Street <br> NY 535022, USA<br> <br> <strong>Phone:</strong>
+								+1 5589 55488 55<br> <strong>Email:</strong>
+								info@example.com<br>
+							</p>
+							<div class="social-links mt-3">
+								<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a
+									href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a
+									href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+								<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+								<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a
+								href="/index.html" th:href="@{/index}">Home</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a
+								href="/about.html" th:href="@{/about}">About us</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a
+								href="/contact.html" th:href="@{/contact}">Contact</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Documents</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a
+								href="/services.html" th:href="@{/services}">Services</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Terms
+									of service</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="#">Privacy
+									policy</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-4 col-md-6 footer-newsletter">
+						<h4>Our Newsletter</h4>
+						<p>Subscribe to our Newsletter to get Regular update</p>
+						<form action="" method="post">
+							<input type="email" name="email"><input type="submit"
+								value="Subscribe">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>Wedding Duniya</span></strong>. All
+				Rights Reserved
+			</div>
+			<div class="credits">
+				Designed by <a href="/index.html" th:href="@{/index}">WeddingDunniya</a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- WhatsApp chat option -->
+	<a href="https://wa.me/911234567890"
+		th:href="@{https://wa.me/911234567890}" target="_blank"
+		class="whatsapp_float"><i
+		class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+	<!-- end WhatsApp chat option -->
+
+	<!-- up arrow  -->
+	<a href="#"
+		class="back-to-top d-flex align-items-center justify-content-center"><i
+		class="bi bi-arrow-up-short"></i></a>
+	<!-- end up arrow  -->
+
+	<!-- Vendor JS Files -->
+	<script
+		src="/assets/mainPage/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
+		th:href="@{/assets/mainPage/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script
+		src="/assets/mainPage/assets/vendor/glightbox/js/glightbox.min.js"
+		th:href="@{/assets/mainPage/assets/vendor/glightbox/js/glightbox.min.js}"></script>
+	<script
+		src="/assets/mainPage/assets/vendor/isotope-layout/isotope.pkgd.min.js"
+		th:href="@{/assets/mainPage/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+	<script
+		src="/assets/mainPage/assets/vendor/swiper/swiper-bundle.min.js"
+		th:href="@{/assets/mainPage/assets/vendor/swiper/swiper-bundle.min.js}"></script>
+	<script
+		src="/assets/mainPage/assets/vendor/waypoints/noframework.waypoints.js"
+		th:href="@{/assets/mainPage/assets/vendor/waypoints/noframework.waypoints.js}"></script>
+	<script src="/assets/mainPage/assets/vendor/php-email-form/validate.js"
+		th:href="@{/assets/mainPage/assets/vendor/php-email-form/validate.js}"></script>
+	<!-- Main JS File -->
+	<script src="/assets/mainPage/assets/js/main.js"
+		th:href="@{/assets/mainPage/assets/js/main.js}"></script>
+</body>
+</html>

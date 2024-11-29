@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+	
+<head>
+<meta charset="UTF-8">
+<title>User Profile Details</title>
+</head>
+<body>
+
+
+    <!-- main content-->
+    <section class="home-section">
+       
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>
+                / <a href="/allUsers.html">Users </a>
+                / User Profile
+            </div>
+
+            <div class="overview-boxes">
+                <!--[ labels ] start-->
+                <div class="col-xl-12 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="header-text"><b>User Profile Details</b></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile details -->
+                <div class="col-xl-12 col-md-8">
+                    <div class="card">
+                        <img src="/assets/images/user_1.jpg" class="card-img-top rounded-circle mx-auto"
+                            style="margin-top:10px; width: 80px;" alt="User Image">
+                        <div class="card-body text-center" style="padding: 0px;">
+                            <h5 class="card-title">Test User</h5>
+
+                            <!-- Tab Content -->
+                            <div class="tab-content mt-4">
+                                <div class="tab-pane fade show active" id="overview">
+                                    <form>
+                                        <h5 style="font-size: 20px;padding: 10px 20px;">User Details
+                                        </h5>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="fullName" class="col-sm-3 col-form-label text-left">Full
+                                                        Name</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="fullName"
+                                                            value="Test User" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="dateOfBirth"
+                                                        class="col-sm-3 col-form-label text-left">DOB</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="tel" class="form-control" id="dateOfBirth"
+                                                            value="12/03/1998" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="gender"
+                                                        class="col-sm-3 col-form-label text-left">Gender</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="gender" value="Male"
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="age"
+                                                        class="col-sm-3 col-form-label text-left">Age</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="age" value="24"
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="email"
+                                                        class="col-sm-3 col-form-label text-left">Email</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="email"
+                                                            value="testuser@abc.com" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="contactNo"
+                                                        class="col-sm-3 col-form-label text-left">Contact
+                                                        No.</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="contactNo"
+                                                            value="+91-9876543201" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="address"
+                                                        class="col-sm-3 col-form-label text-left">Address</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="address"
+                                                            value="Hinjewadi Phase 1" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="education"
+                                                        class="col-sm-3 col-form-label text-left">Education</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="education"
+                                                            value="BE-IT" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="occupation"
+                                                        class="col-sm-3 col-form-label text-left">Occupation</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="occupation"
+                                                            value="Software Developer" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="maritalStatus"
+                                                        class="col-sm-3 col-form-label text-left">Marital
+                                                        Status</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="maritalStatus"
+                                                            value="Single" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="caste"
+                                                        class="col-sm-3 col-form-label text-left">Caste</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="caste"
+                                                            value="Leva Patil" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="religion"
+                                                        class="col-sm-3 col-form-label text-left">Religion</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="religion"
+                                                            value="Hindu" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="bloodGroup"
+                                                        class="col-sm-3 col-form-label text-left">Blood
+                                                        Group</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="bloodGroup"
+                                                            value="O+" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="height"
+                                                        class="col-sm-3 col-form-label text-left">Height</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="height"
+                                                            value="5.8ft" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="weight"
+                                                        class="col-sm-3 col-form-label text-left">Weight</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="weight" value="65kg"
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="noOfSiblings"
+                                                        class="col-sm-3 col-form-label text-left">No. of
+                                                        Siblings</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="noOfSiblings"
+                                                            value="5" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="familyType"
+                                                        class="col-sm-3 col-form-label text-left">Family
+                                                        Type</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="familyType"
+                                                            value="Joint" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="familyValue"
+                                                        class="col-sm-3 col-form-label text-left">Family
+                                                        Value</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="familyValue"
+                                                            value="xyz" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="fathersName"
+                                                        class="col-sm-3 col-form-label text-left">Father's
+                                                        Name</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="fathersName"
+                                                            value="Mr.Test" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="mothersName"
+                                                        class="col-sm-3 col-form-label text-left">Mother's
+                                                        Name</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="mothersName"
+                                                            value="Mrs. Test" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="language"
+                                                        class="col-sm-3 col-form-label text-left">Language</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="language"
+                                                            value="Marathi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+
+                                                <div class="form-group row">
+                                                    <label for="hobbies"
+                                                        class="col-sm-3 col-form-label text-left">Mother Tongue</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="hobbies"
+                                                            value="Marathi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="eatingHabits"
+                                                        class="col-sm-3 col-form-label text-left">Eating
+                                                        Habits</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="eatingHabits"
+                                                            value="NA" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="smokingHabits"
+                                                        class="col-sm-3 col-form-label text-left">Smoking
+                                                        Habits</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="smokingHabits"
+                                                            value="No" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoriteFood"
+                                                        class="col-sm-3 col-form-label text-left">Favorite
+                                                        Food</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoriteFood"
+                                                            value="Pasta" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoriteMovie"
+                                                        class="col-sm-3 col-form-label text-left">Favorite Movie</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoriteMovie"
+                                                            value="DDLJ" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoriteSong"
+                                                        class="col-sm-3 col-form-label text-left">Favorite
+                                                        Song</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoriteSong"
+                                                            value="Raabta" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoriteBook"
+                                                        class="col-sm-3 col-form-label text-left">Favorite
+                                                        Book</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoriteBook"
+                                                            value="Rich Dad" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoriteSinger"
+                                                        class="col-sm-3 col-form-label text-left">Favorite
+                                                        Singer</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoriteSinger"
+                                                            value="Arman Malik" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="favoritePlace"
+                                                        class="col-sm-3 col-form-label text-left">Favorite Place</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="favoritePlace"
+                                                            value="Matheran" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="physicalStatus"
+                                                        class="col-sm-3 col-form-label text-left">Physical
+                                                        Status</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="physicalStatus"
+                                                            value="Normal" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="bodyType" class="col-sm-3 col-form-label text-left">Body
+                                                        Type</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="bodyType"
+                                                            value="Normal" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-6">
+
+                                                <div class="form-group row">
+                                                    <label for="hobbies"
+                                                        class="col-sm-3 col-form-label text-left">Hobbies</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="hobbies"
+                                                            value="Listening Songs, Cooking" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label for="income"
+                                                        class="col-sm-3 col-form-label text-left">Income</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="income"
+                                                            value="23.5LPA" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row" style="margin: 10px;">
+                                            <div class="col-12">
+                                                <div class="form-group row">
+                                                    <label for="colorComplexion"
+                                                        class="col-sm-3 col-form-label text-left" style="margin-right: -100px;">Color
+                                                        Complexion</label>
+                                                    <div class="col-sm-4" >
+                                                        <input type="text" class="form-control" id="colorComplexion"
+                                                            value="Fair" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <!-- Add other rows in a similar manner -->
+                                        <!-- ... -->
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- End profile details -->
+
+                            <!-- Action Buttons -->
+                            <a href="#" id="activateBtn" class="btn btn-success" data-toggle="modal"
+                                data-target="#activateModal">Active Account</a>
+                            <a href="#" id="deactivateBtn" class="btn btn-secondary" data-toggle="modal"
+                                data-target="#deactivateModal">Deactive Account</a>
+                            <a href="#" id="blockBtn" class="btn btn-danger" data-toggle="modal"
+                                data-target="#blockModal">Block Account</a>
+                                <!-- End Action Buttons -->
+                        </div>
+
+
+                        <!-- Activate Account Modal -->
+                        <div class="modal" id="activateModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><b>Activate Account</b></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to activate this account?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Confirm</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deactivate Account Modal -->
+                        <div class="modal" id="deactivateModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><b>Deactivate Account</b></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to deactivate this account?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Confirm</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Block Account Modal -->
+                        <div class="modal" id="blockModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><b>Blocked Account</b></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to block this account?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Confirm</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+       
+    </section>
+
+</body>
+</html>

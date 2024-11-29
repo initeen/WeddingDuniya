@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	
+	    <!-- main content-->
+    <section class="home-section">
+     
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>
+                / <a href="/settings.html">Settings </a>
+                / Designations
+            </div>
+
+            <div class="overview-boxes">
+
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+
+                        <!-- <div class="card"> -->
+
+                        <div class="card-header">
+                            <h5 class="header-text"><b>All Designations</b></h5>
+                            <button id="" class="btn btn-primary" data-toggle="modal"
+                                data-target="#createDesignationModal">
+                                <!-- <i class="material-icons">&#xE147;</i> -->
+                                <span class="button-text">Add New Designation</span>
+                            </button>
+                        </div>
+
+                        <!-- Create New Designation Modal -->
+                        <div class="modal fade" id="createDesignationModal" tabindex="-1" role="dialog"
+                            aria-labelledby="createDesignationModalLabel" aria-hidden="true">
+                            <!-- Content for creating designation goes here -->
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="createDesignationModalLabel"><b>Create New
+                                                Designation</b>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form id="createDesignationForm" onsubmit="return validateForm()">
+                                    <div class="modal-body">
+                                        <!-- <form id="createDesignationForm"> -->
+                                            <div class="form-group">
+                                                <label for="createDesignationName"><b>Designation Name </b><span
+                                                        style="color: red;">*</span></label>
+                                                <input type="text" class="form-control" id="createDesignationName"
+                                                    placeholder="Enter Designation Name" required>
+                                                <div class="error-message" id="error-messages-createDesignationName"
+                                                    style="color: red;"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="createDepartment"><b>Department </b><span
+                                                        style="color: red;">*</span></label>
+                                                <select class="form-control" id="createDepartment">
+                                                    <option value="" selected disabled>Select Department</option>
+                                                    <!-- Add your department options here -->
+                                                    <option value="marriage_bureau">Dept01_Marriage Bureau</option>
+                                                    <option value="user">Dept02_User</option>
+                                                    <option value="payment">Dept03_Employee</option>
+                                                   <!--  <option value="feedback">Feedback</option>
+                                                    <option value="offer">Offer</option>
+                                                    <option value="events">Events</option> -->
+                                                </select>
+                                                <div class="error-message" id="error-messages-createDepartment"
+                                                    style="color: red;"></div>
+                                            </div>
+                             
+                                            <!-- Create Designation Modal -->
+                                            <div class="form-group">
+                                                <label for="createPermission"><b>Permission </b><span
+                                                        style="color: red;">*</span></label>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <input type="checkbox" id="createPermission_event_page"
+                                                                value="event_page">
+                                                            <label for="createPermission_event_page">Message Page</label>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="checkbox" id="createPermission_offer_page"
+                                                                value="offer_page">
+                                                            <label for="createPermission_offer_page">Home Page</label>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="checkbox" id="createPermission_user_page"
+                                                                value="user_page">
+                                                            <label for="createPermission_user_page">User Page</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <input type="checkbox"
+                                                                id="createPermission_marriage_bureau_page"
+                                                                value="marriage_bureau_page">
+                                                            <label for="createPermission_marriage_bureau_page">Marriage
+                                                                Bureau
+                                                                Page</label>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="checkbox" id="createPermission_payment_page"
+                                                                value="payment_page">
+                                                            <label for="createPermission_offer_page">Offer
+                                                                Page</label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input type="checkbox" id="createPermission_payment_page"
+                                                                value="payment_page">
+                                                            <label for="createPermission_notification_page">Notification Page
+                                                                Page</label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input type="checkbox" id="createPermission_payment_page"
+                                                                value="payment_page">
+                                                            <label for="createPermission_Employee_page">Employee
+                                                                Page</label>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="checkbox" id="createPermission_payment_page"
+                                                                value="payment_page">
+                                                            <label for="createPermission_Profile_page">Profile
+                                                                Page</label>
+                                                        </div><div class="col-4">
+                                                            <input type="checkbox" id="createPermission_payment_page"
+                                                                value="payment_page">
+                                                            <label for="createPermission_Setting_page">Setting
+                                                                Page</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="error-message" id="error-messages-createPermission"
+                                                    style="color: red;"></div>
+                                            </div>
+                                       <!--  </form> -->
+                                    </div>
+                                    <!-- Modal Footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary" id="resetCreateButton"
+                                            onclick="resetForm()">Reset</button>
+                                        <button type="button" class="btn btn-primary" id="createButton"
+                                            onclick="addDesignation()">Create</button>
+                                    </div>
+                                    
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Table -->
+                        <!-- Table -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SL</th>
+                                    <th scope="col">Designation Name</th>
+                                    <th scope="col">&nbsp;Department</th>
+                                    <th scope="col">&nbsp;Permission</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="designationTableBody">
+                                <!-- Table body content goes here -->
+                            </tbody>
+                        </table>
+
+                        <!-- Add this modal code to your HTML file -->
+                        <div class="modal fade" id="viewDesignationModal" tabindex="-1" role="dialog"
+                            aria-labelledby="viewDesignationModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="viewDesignationModalLabel"><b>View Designation</b>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Add a form to display the details -->
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="viewDesignationName"><b>Designation Name</b></label>
+                                                <input type="text" class="form-control" id="viewDesignationName"
+                                                    readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="viewDepartment"><b>Department</b></label>
+                                                <input type="text" class="form-control" id="viewDepartment" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="viewPermissions"><b>Permissions</b></label>
+                                                <input type="text" class="form-control" id="viewPermissions" readonly>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Updated modal code with dynamically generated dropdown options and checkboxes -->
+                        <div class="modal fade" id="editDesignationModal" tabindex="-1" role="dialog"
+                            aria-labelledby="editDesignationModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editDesignationModalLabel"><b>Edit Designation</b>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Updated form with dynamically generated dropdown options and checkboxes -->
+                                        <form id="editDesignationForm">
+                                            <!-- Hidden input to store the index of the row being edited -->
+                                            <input type="hidden" id="editRowIndex" value="">
+
+                                            <div class="form-group">
+                                                <label for="editDesignationName"><b>Designation Name</b> <span
+                                                        style="color: red;"> *</span></label>
+                                                <input type="text" class="form-control" id="editDesignationName"
+                                                    required>
+                                                <div id="error-message-editdesignationName" style="color: red;">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="editDepartment"><b>Department</b> <span style="color: red;">
+                                                        *</span></label>
+                                                <select class="form-control" id="editDepartment" required>
+                                                    <option value="select_department">Select Department</option>
+                                                    <option value="marriage_bureau">Marriage Bureau</option>
+                                                    <option value="user">User</option>
+                                                    <option value="payment">Payment</option>
+                                                    <option value="feedback">Feedback</option>
+                                                    <option value="offer">Offer</option>
+                                                    <option value="events">Events</option>
+                                                </select>
+                                                <div id="error-message-editDepartment" style="color: red;">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="editPermissions"><b>Permissions</b> <span
+                                                        style="color: red;">
+                                                        *</span></label><br>
+                                                <!-- Checkboxes for permissions -->
+
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input editPermission editPermission1"
+                                                        id="editPermission1"
+                                                        value="Permission1">
+                                                    <label class="form-check-label" for="editPermission1">
+                                                        Event Page</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input editPermission editPermission2"
+                                                        id="editPermission2"
+                                                        value="Permission2">
+                                                    <label class="form-check-label" for="editPermission2">Offer Page
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" id="editPermission3"
+                                                        class="form-check-input editPermission editPermission3"
+                                                        value="Permission1">
+                                                    <label class="form-check-label" for="editPermission1">User Page
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" id="editPermission4"
+                                                        class="form-check-input editPermission editPermission4"
+                                                        value="Permission2">
+                                                    <label class="form-check-label" for="editPermission2">Marriage
+                                                        Bureau
+                                                        Page</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" id="editPermission5"
+                                                        class="form-check-input editPermission editPermission5"
+                                                        value="Permission1">
+                                                    <label class="form-check-label" for="editPermission1">Payment
+                                                        Page</label>
+                                                </div>
+                                                <div id="error-message-editPermission" style="color: red;">
+                                                </div>
+                                                <!-- Add more checkboxes as needed -->
+                                            </div>
+
+
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-secondary"
+                                                onclick="resetEditForm()">Reset</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="updateDesignation()">Update</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog"
+                            aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteConfirmationModalLabel"><b>Delete Designation
+                                                Confirmation</b></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to delete the designation?</p>
+                                        <p id="deleteDesignationName" class="font-weight-bold"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-danger"
+                                            onclick="confirmDeleteDesignation()">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!--[ Recent Users ] end-->
+        </div>
+
+
+    </section>
+	
+	
+</body>
+</html>

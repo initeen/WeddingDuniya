@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+	
+<head>
+<meta charset="UTF-8">
+<title>Policy-Privacy</title>
+</head>
+<body>
+
+<!-- main content-->
+    <section class="home-section">
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>/
+                <a href="/settings.html"> Settings</a>
+                / Policy-Privacy
+            </div>
+
+            <div class="overview-boxes">
+                <!--[ labels ] start-->
+                <div class="col-xl-12 col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="header-text"><b>Policy And Privacy</b></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <div class="card-header">
+                            <div class="container">
+                                <h3>Manage Policy - Privacy</h3>
+
+                                <input type="file" id="pdfInput" accept=".pdf">
+                                <button type="button" class="btn btn-success" onclick="uploadPdf()">Upload PDF</button>
+
+                                <div id="pdfList">
+                                    <!-- PDFs will be displayed here -->
+                                </div>
+                                <button type="button" class="btn btn-primary">View</button>
+
+                                <!-- Modify your existing Delete button -->
+                                <button type="button" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delete Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel"><b>Delete Policy & Privacy Confirmation</b></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete the policy-privacy?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger" onclick="deletePolicy()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+</html>

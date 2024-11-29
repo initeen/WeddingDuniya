@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title>Payment Reports</title>
+</head>
+<body>
+
+<!-- main content-->
+    <section class="home-section">
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>/
+                <a href="/settings.html"> Settings </a>
+                / Payment Reports
+            </div>
+
+
+            <div class="overview-boxes">
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <div class="card-header">
+                            <h5 class="header-text"><b>Payment Reports</b></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <!-- Title before Search Box -->
+                        <div class="search-title">
+                            <h6>Search Reports </h6>
+                        </div>
+
+                        <div class="col-xl-12 col-md-8">
+                            <div class="row">
+                                <div class="col-4">
+                                    <select id="selectPaymentType" onchange="updateTableVisibility()">
+                                        <option value="selectPaymentType">Select Payment Type</option>
+                                        <option value="all">All Payment History</option>
+                                        <option value="overdue">Overdue</option>
+                                    </select>
+                                </div>
+                                <div class="col-8 ">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <form action="">
+                                                <label for="from">From</label>
+                                                <input type="date" id="from" name="from">
+                                            </form>
+                                        </div>
+                                        <div class="col-4">
+                                            <form action="">
+                                                <label for="to">To</label>
+                                                <input type="date" id="to" name="to">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="getReportBtn">
+                                        <button id="" class="btn btn-primary" type="button" onclick="getReport()">Get
+                                            Report</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive mt-4">
+                                <!-- Table for All Payment History -->
+                                <table id="allPaymentTable" class="table hidden table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Transaction ID</th>
+                                            <th>Payment By</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Rows will be dynamically added here using JavaScript -->
+                                    </tbody>
+                                </table>
+
+                                <!-- Table for Overdue -->
+                                <table id="overdueTable" class="table hidden table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Marriage Bureau Name</th>
+                                            <th>Owner Name</th>
+                                            <th>Contact Number</th>
+                                            <th>Location</th>
+                                            <th>Overdue Amount</th>
+                                            <th>Overdue Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Rows will be dynamically added here using JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Export Data Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-danger" onclick="exportToPdf()">Export to PDF</button>
+                                <button class="btn btn-success ml-2" onclick="exportToExcel()">Export to Excel</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+</html>

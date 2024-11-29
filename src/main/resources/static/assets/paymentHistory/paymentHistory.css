@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    margin: -10px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 0px solid #333;
+    
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+   
+}
+th {
+    height: 36px; /* Adjust the height as needed */
+  }
+
+/* #searchInput, #paymentByFilter {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+} */
+
+#paymentByFilter {
+    box-sizing: border-box;
+    border: 0px solid #196caf; /* Border properties */
+    /* You can also add padding if needed */
+    border-radius: 4px;
+  }
+
+  /* Default styles for select element and options */
+select#paymentByFilter {
+    background-color: transparent;
+    color: black;
+}
+
+select#paymentByFilter option {
+    background-color: transparent;
+    color: black;
+}
+
+/* Styles to be applied when clicked */
+.select-clicked {
+    background-color: white;
+    color: lightblue;
+}
+/* Default styles for select element and options */
+select#paymentByFilter {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #ccc; /* Add a border to the select element */
+    padding: 5px; /* Add padding for better appearance */
+}
+
+select#paymentByFilter option {
+    background-color: transparent;
+    color: black;
+}
+
+/* Styles to be applied when clicked */
+.select-clicked {
+    background-color: white;
+    color: lightblue;
+}
+
+label {
+    margin-right: -600px; /* Adjust this value as needed */
+    margin-bottom: -0.1999999999999993rem;
+}
+
+/* Adjust the padding of the select element */
+select#paymentByFilter {
+    padding: 5px; /* Adjust this value as needed */
+}
+
+/* Add this CSS to your stylesheet or in a style tag in the head of your HTML document */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff; /* Change this to your desired background color */
+    color: #ffffff; /* Change this to your desired text color */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Change this to the hover background color */
+  }
+  
+  /* Additional styles for better visual consistency */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  label {
+    margin-left: 135px;
+    padding-top: 10px;
+    text-align: justify;
+
+  }
+  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_SignUp</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/other/style.css" />
+    <!-- IconsCout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/assets/userSignUp/userSignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms1">
+            <div class="form">
+                <span class="title">Registration</span>
+                <form action="#" th:action="@{/createUser}" th:object="${user}" method="post">
+                    <!-- first row-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter your name" name="userName">
+                                <i class="uil uil-user"></i><br>
+                            </div>
+                            <div class="error-message" id="error-message-name" style="color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter your email" name="userEmail">
+                                <i class="uil uil-envelope icon"></i><br>
+                            </div>
+                            <div class="error-message" id="error-message-email" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- second row-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter your loaction" name="userLocation">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="error-message" id="error-message-location" style=" color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter contact number" name="contactNumber">
+                                <i class="fa fa-phone" aria-hidden="true"></i><br>
+                            </div>
+                            <div class="error-message" id="error-message-contact-number" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- third row -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-field">
+                                <input type="text" placeholder="Enter your gender" id="gender" name="gender">
+                                <!-- Added id="gender" -->
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                            <div class="error-message" id="error-message-gender" style="color: red;"></div>
+                        </div>
+                        <div class="col-6">
+                            <!-- fourth row -->
+                            <div class="login-signupUser">
+                                <input type="checkbox" id="">
+                                <span class="text">I accepted all
+                                    <a href="#" class="text login-link">terms</a> and <a href="#"
+                                        class="text login-link">conditions</a>
+                                    <div class="error-message" id="error-message-termCon" style="color: red;"></div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-field button">
+                             <a href="#">
+                                <input type="submit" value="SignUp" id="signupButton">
+                            </a>
+             
+                        </div>
+                    </div>
+                    <div class="login-signup">
+                        <span class="text">Already a member?
+                            <a href="/login.html" th:href="@{/signin}" class="text login-link">Login Now</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<script src="/assets/userSignUp/userSignUp.js"></script>
+
+</body>
+
+</html>

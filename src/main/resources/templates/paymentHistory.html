@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title>Payment History</title>
+</head>
+<body>
+
+<!-- main content-->
+  <section class="home-section">
+    
+     <!-- payment history css -->
+  <link rel="stylesheet" href="/assets/paymentHistory/paymentHistory.css">
+ 
+    <div class="home-content">
+	
+      <div class="page-navigation">
+        <a href="/home.html">Home </a>
+        / Payment History
+    </div>
+
+      <!--[ Recent Users ] start-->
+      <div class="col-xl-12 col-md-8">
+        <div class="card Recent-Users">
+          <div class="card-header">
+            <h5><b>Received Payment History</b></h5>
+            <!-- Add the print button here -->
+            <button type="button" class="btn btn-primary" onclick="printPaymentHistory()">Print</button>
+            <!-- <div>
+              <label for="paymentByFilter"><b>Filter</b></label>
+            </div>
+            <select id="paymentByFilter" onclick="applyStyles(this)" style="padding-left: 10px;">
+              <option value="">All Payments</option>
+              <option value="user">Users</option>
+              <option value="marriage bureau">Marriage Bureaus</option>
+            </select> -->
+          </div>
+
+          <div class="card-block px-0 py-3">
+            <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+              <table id="paymentTable" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Transaction ID</th>
+                    <th>Payment By</th>
+                    <th>Amount</th>
+                    <!-- <th>Notes</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2023-10-01</td>
+                    <td>00:01:10</td>
+                    <td>INV-001</td>
+                    <td>User</td>
+                    <td>&#8377; 1,000</td>
+                    <!-- <td>Monthly subscription payment</td> -->
+                  </tr>
+                  <tr>
+                    <td>2023-09-05</td>
+                    <td>12:02:55</td>
+                    <td>INV-002</td>
+                    <td>Marriage Bureau</td>
+                    <td>&#8377; 1,500</td>
+                    <!-- <td>Payment for services rendered</td> -->
+                  </tr>
+                  <tr>
+                    <td>2023-10-10</td>
+                    <td>04:43:55</td>
+                    <td>INV-001</td>
+                    <td>User</td>
+                    <td>&#8377; 1,000</td>
+                    <!-- <td>Monthly subscription payment</td> -->
+                  </tr>
+                  <tr>
+                    <td>2023-07-05</td>
+                    <td>04:55:45</td>
+                    <td>INV-002</td>
+                    <td>Marriage Bureau</td>
+                    <td>&#8377; 1,500</td>
+                    <!-- <td>Payment for services rendered</td> -->
+                  </tr>
+                  <tr>
+                    <td>2023-10-01</td>
+                    <td>10:45:33</td>
+                    <td>INV-001</td>
+                    <td>User</td>
+                    <td>&#8377; 1,000</td>
+                    <!-- <td>Monthly subscription payment</td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--[ Recent Users ] end-->
+    </div>
+
+    <!-- logout modal -->
+    <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logoutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Logout Confirmation</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <p>Are you sure you want to logout?</p>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <a href="/login.html" id="confirmLogout" class="btn btn-primary">Logout</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end logout modal -->
+
+
+  </section>
+
+</body>
+</html>

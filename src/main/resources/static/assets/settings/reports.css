@@ -1,0 +1,128 @@
+/* Your existing styles */
+.search-title {
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.search-title h6 {
+    font-size: 18px;
+    font-weight: 100%;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+
+#locationSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+#mbreportSelect {
+    width: 225px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+
+.getReportBtn{
+    text-align: center;
+    margin-top: 10px;
+}
+#marriageBureauSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+#overdueMarraigeBeuros {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+#selectPaymentType {
+    width: 378px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+
+
+#genderSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+}
+#statusSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+
+}
+#marriageBureauBranchSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    margin-top: 3px;
+}
+#reportSelect {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 186px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    margin-top: 3px;
+}
+
+#reportSelect-user {
+    width: 258px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    margin-top: 3px;
+}
+
+/* Add more styles as needed */
+
+/* for payment hide table */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: table;
+}
+

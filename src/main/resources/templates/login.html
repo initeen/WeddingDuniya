@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet"
+	href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="/assets/login/login.css">
+</head>
+<body>
+	<div class="container">
+		<div class="forms">
+			<div class="form login">
+				<span class="title">Login</span>
+				<th:block th:if="${session.msg}">
+					<p class="text-center fs-4 "style="color: red; text-align: center;">[[${session.msg}]]</p>
+					<th:block th:text="${@sessionHelper.removeMsgFromSession()}"></th:block>
+				</th:block>
+				<form id="loginForm" th:action="@{/home}" method="post">
+					<div class="input-field">
+						<input id="email" type="email" value="" name="email"
+							placeholder="Enter your email" required> <i
+							class="uil uil-envelope icon"></i><br />
+					</div>
+					<div class="error-message" id="error-message-email"
+						style="color: red; display: none;">Invalid email</div>
+					
+					<div class="input-field">
+						<input id="password" type="password" class="password" value="" name="password"
+							placeholder="Enter your password" required > <i
+							class="uil uil-lock icon"></i> <i
+							class="uil uil-eye-slash showHidePw"></i><br />
+					</div>
+					<div class="error-message" id="error-message-password"
+						style="color: red; display: none;">Invalid password</div>
+						
+					<div class="checkbox-text">
+						<div class="checkbox-content">
+							<input type="checkbox" id="rememberMe" name="rememberMe"> <label
+								for="rememberMe" class="text">Remember me</label>
+						</div>
+						
+						<a href="/recoverPassword.html" th:href="@{/recoverPassword}"
+							class="text">Forgot password?</a>
+					</div>
+					<div class="input-field button">
+						<!-- <a href="#" th:href="@{/home}"> <input type="button"
+							value="Login" id="loginButton">
+						</a> -->
+						<!-- <button type="submit" id="loginButton"></button> -->
+						<a href="#"> <input type="submit"
+							value="Login" id="loginButton">
+						</a>
+					</div>
+					<div class="login-signup">
+						<span class="text">Not a member? <a href="/userSignUp.html"
+							th:href="@{/account}" class="text signup-link">SignUp Now</a>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="/assets/login/login.js"></script>
+
+</body>
+
+</html>

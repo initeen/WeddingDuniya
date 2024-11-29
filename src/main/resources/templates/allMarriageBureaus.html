@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+<title>All Marriage Bureaus</title>
+</head>
+<body>
+
+	<!-- main content-->
+	<section class="home-section">
+
+
+		<!-- allMb CSS-->
+		<link rel="stylesheet"
+			href="/assets/allMarriageBureaus/allMarriageBureaus.css"
+			th:href="@{/assets/allMarriageBureaus/allMarriageBureaus.css}">
+
+		<div class="home-content">
+
+			<div class="page-navigation">
+				<a href="/home.html">Home </a> / All Marriage Bureaus
+			</div>
+
+			<div class="overview-boxes">
+				<!-- marraige beuros stats-->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_total.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/allMarriageBureaus.html"
+											th:href="@{/allMarriageBureaus}">Total </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_active.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/activeMarriageBureaus.html"
+											th:href="@{/activeMarriageBureaus}">Active </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_deactive.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/deactiveMarriageBureaus.html"
+											th:href="@{/deactiveMarriageBureaus}">Deactive </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- flexbox-1 -->
+				<div class="col-md-12 col-xl-3">
+					<div class="card card-social">
+						<div class="card-block border-bottom">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-auto">
+									<img src="/assets/images/marriage_bureau_blocked.png" alt="">
+								</div>
+								<div class="col text-center">
+									<h3>12,281</h3>
+									<h5 class="text-c-green mb-0">
+										<span class="text-muted"><a
+											href="/blockedMarriageBureaus.html"
+											th:href="@{/blockedMarriageBureaus}">Blocked </a></span>
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end flexbox-1 -->
+				<!-- end stats-->
+				<!--[ Recent Users ] start-->
+				<div class="col-xl-12 col-md-8">
+					<div class="card Recent-Users">
+						<div class="card" style="border: aliceblue; box-shadow: none;">
+							<div class="card-header">
+								<h5 class="header-text">
+									<b>All Marriage Bureaus</b>
+								</h5>
+								<button id="" class="btn btn-primary" data-toggle="modal"
+									data-target="#addMarriageBeuroModal">
+									<!-- <i class="material-icons">&#xE147;</i> -->
+									<span class="button-text">Add New Marriage Bureau</span>
+								</button>
+							</div>
+
+
+							<!-- Modal for adding a new marriage bureau -->
+							<div class="modal fade" id="addMarriageBeuroModal" tabindex="-1"
+								role="dialog" aria-labelledby="addMarriageBeuroModalLabel"
+								aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="addMarriageBeuroModalLabel">
+												<b>Add New Marriage Bureau</b>
+											</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<!-- Add a form here for marriage bureau input -->
+											<form id="userForm">
+
+												<div class="row">
+													<div class="col-6">
+														<div class="form-group">
+															<label for="beuroname"><b>Marriage Bureau
+																	Name</b><span style="color: red;"> *</span></label> <input
+																type="text" class="form-control" id="beuroname"
+																name="beuroname"
+																placeholder="Enter Marriage Bureau Name">
+															<div class="error-message" id="error-message-beuroname"
+																style="color: red;"></div>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="form-group">
+															<label for="ownername"><b>Owner Name</b><span
+																style="color: red;"> *</span></label> <input type="text"
+																class="form-control" id="ownername" name="ownername"
+																placeholder="Enter Owner Name">
+															<div class="error-message" id="error-message-ownername"
+																style="color: red;"></div>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="row">
+													<div class="col-6">
+														<div class="form-group">
+															<label for="email"><b>Marriage Bureau Email</b><span
+																style="color: red;"> *</span></label> <input type="email"
+																class="form-control" id="email" name="email"
+																placeholder="Enter Email" required>
+															<div class="error-message" id="error-message-email"
+																style="color: red;"></div>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="form-group">
+															<label for="contactnumber"><b>Contact Number</b><span
+																style="color: red;"> *</span></label> <input type="text"
+																class="form-control" id="contactnumber"
+																name="contactnumber" placeholder="Enter Contact Number"
+																required>
+															<div class="error-message"
+																id="error-message-contactnumber" style="color: red;"></div>
+														</div>
+													</div>
+												</div>
+												<!-- <div class="row">
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="gstno"><b>GST Number(Optional)</b></label>
+                              <input type="text" class="form-control" id="gstno" name="gstno"
+                                placeholder="Enter GST Number">
+                              <div class="error-message" id="error-message-gstno" style="color: red;"></div>
+                            </div>
+                          </div>
+                        </div> -->
+												<div class="row">
+													<div class="col-6">
+														<div class="form-group">
+															<label for="country"><b>Country</b><span
+																style="color: red;"> *</span></label> <input type=""
+																class="form-control" id="country"
+																placeholder="Enter Country">
+															<div class="error-message" id="error-message-country"
+																style="color: red;"></div>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="form-group">
+															<label for="state"><b>State</b><span
+																style="color: red;"> *</span></label> <input type=""
+																class="form-control" id="state"
+																placeholder="Enter State">
+															<div class="error-message" id="error-message-state"
+																style="color: red;"></div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-6">
+														<div class="form-group">
+															<label for="city"><b>City</b><span
+																style="color: red;"> *</span></label> <input type="text"
+																class="form-control" id="cityInput"
+																placeholder="Enter City">
+															<div class="error-message" id="error-message-city"
+																style="color: red;"></div>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="form-group">
+															<label for="pincode"><b>Pincode</b><span
+																style="color: red;"> *</span></label> <input type="text"
+																class="form-control" id="pincodeInput"
+																placeholder="Enter Pincode">
+															<div class="error-message" id="error-message-pincode"
+																style="color: red;"></div>
+														</div>
+													</div>
+												</div>
+
+											</form>
+										</div>
+										<div class="modal-footer justify-content-center">
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">Cancel</button>
+											<button type="button" class="btn btn-secondary"
+												id="resetForm" oonclick="resetForm()">Reset</button>
+											<button type="button" class="btn btn-primary"
+												id="addUserSubmit">Add Marriage Bureau</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!-- searchbar-->
+						<div class="col-xl-12 col-md-8">
+							<!-- <div class="card Recent-Users"> -->
+							<div class="s002">
+								<form>
+									<div class="inner-form">
+										<div class="input-field first-wrap">
+											<div class="icon-wrap">
+
+												<img
+													src="/assets/images/bxs+user+badge-1325051987095801102.svg"
+													alt="">
+											</div>
+											<input id="search" type="text"
+												placeholder="Enter marriage bureau name" />
+										</div>
+										<div class="input-field fouth-wrap">
+											<div class="icon-wrap">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24"
+													height="24" viewBox="0 0 24 24">
+                          <path
+														d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+                          </path>
+                        </svg>
+											</div>
+											<select data-trigger="" name="choices-single-defaul">
+												<option placeholder="">Location</option>
+												<option>Mumbai</option>
+												<option>Nagpur</option>
+												<option>Nashik</option>
+												<option>Pune</option>
+											</select>
+										</div>
+										<div class="input-field fifth-wrap">
+											<button class="btn-search" type="button">SEARCH</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- end searchbar-->
+						<!--Data table-->
+						<div class="col-xl-12 col-md-8">
+							<div class="table-responsive">
+								<div class="table-wrapper">
+
+									<table class="table table-striped table-hover">
+										<thead>
+											<tr>
+												<th>SL</th>
+												<th>Marriage Bureau Name</th>
+												<th>&nbsp;&nbsp;&nbsp;Status</th>
+												<th>Location</th>
+												<!-- <th>Visit to Portal</th> -->
+												<th>Contact Number</th>
+												<th>Marriage Bureau email</th>
+												<th>View Profile</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr data-status="active">
+												<td>1</td>
+												<td><a href="#">convallissed.com</a></td>
+												<td><span class="label label-success">Active</span></td>
+												<td>Nagpur</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													th:href="@{/marriageBureauProfile}"
+													class="btn btn-sm manage" style="color: #007bff">Manage</a></td>
+											</tr>
+
+											<tr data-status="inactive">
+												<td>2</td>
+												<td><a href="#">quisquamut.net</a></td>
+												<td><span class="label label-warning">Inactive</span></td>
+												<td>Pune</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													class="btn btn-sm manage" style="color: #007bff;">Manage</a></td>
+											</tr>
+
+											<tr data-status="active">
+												<td>3</td>
+												<td><a href="#">convallissed.com</a></td>
+												<td><span class="label label-success">Active</span></td>
+												<td>Pune</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff;">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													class="btn btn-sm manage" style="color: #007bff;">Manage</a></td>
+											</tr>
+
+											<tr data-status="inactive">
+												<td>4</td>
+												<td><a href="#">quisquamut.net</a></td>
+												<td><span class="label label-warning">Inactive</span></td>
+												<td>Nashik</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff;">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													class="btn btn-sm manage" style="color: #007bff;">Manage</a></td>
+											</tr>
+
+											<tr data-status="active">
+												<td>5</td>
+												<td><a href="#">convallissed.com</a></td>
+												<td><span class="label label-success">Active</span></td>
+												<td>Mumbai</td>
+												<!-- <td><a href="#" class="btn btn-sm manage" style="color: #007bff;">Manage</a></td> -->
+												<td>+911234567890</td>
+												<td><a href="#" class="btn btn-sm manage">abcd@xyz</a></td>
+												<td><a href="/marriageBureauProfile.html"
+													class="btn btn-sm manage" style="color: #007bff;">Manage</a></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<p id="page-numbers"></p>
+									<div class="pagination" id="pagination">
+
+										<a href="#" id="prev">Previous</a> <a href="#"
+											class="page-link" data-page="1">1</a> <a href="#"
+											class="page-link" data-page="2">2</a> <a href="#"
+											class="page-link" data-page="3">3</a> <a href="#"
+											class="page-link" data-page="4">4</a> <a href="#"
+											class="page-link" data-page="5">5</a> <a href="#"
+											class="page-link" data-page="6">6</a> <a href="#" id="next">Next</a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<!-- End Data table-->
+
+					</div>
+				</div>
+
+			</div>
+			<!--[ Recent Users ] end-->
+		</div>
+
+
+
+
+	</section>
+
+</body>
+</html>

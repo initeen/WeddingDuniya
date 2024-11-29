@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org"
+	th:replace="super_adminBase::layout(~{::section})">
+	
+<head>
+<meta charset="UTF-8">
+<title>Overdue List</title>
+</head>
+   
+<body>
+
+<!-- main content-->
+    <section class="home-section">
+       <!-- overdue list css-->
+    <link rel="stylesheet" href="/assets/overdueList/overdueList.css">
+   
+        <div class="home-content">
+
+            <div class="page-navigation">
+                <a href="/home.html">Home </a>
+                / Overdue MBs List
+            </div>
+
+            <div class="main-content">
+                <div class="col-xl-12 col-md-8">
+                    <div class="card Recent-Users">
+                        <div class="card-header">
+                            <h5><b>Overdue Marriage Bureaus List</b></h5>
+                            <button class="print-button" onclick="printList()">Print</button>
+
+                        </div>
+                        <div class="card-body">
+                            <table id="marriageBureauTable">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Marriage Bureau Name</th>
+                                        <th>Owner Name</th>
+                                        <th>Contact Number</th>
+                                        <th>Location</th>
+                                        <th>Overdue Amount</th>
+                                        <th>Overdue Date</th>
+                                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Sample data -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Bureau 1</td>
+                                        <td>Owner 1</td>
+                                        <td>123-456-7890</td>
+                                        <td>Location 1</td>
+                                        <td class="overdue-amount">100.00</td>
+                                        <td>2023-12-10</td>
+                                        <td>
+                                            <button class="btn btn-primary"
+                                                onclick="openDepositForm(this)">Deposit</button>
+                                            <button class="btn btn-secondary"
+                                                onclick="confirmDisable(this)">Disable</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Bureau 2</td>
+                                        <td>Owner 2</td>
+                                        <td>987-654-3210</td>
+                                        <td>Location 2</td>
+                                        <td class="overdue-amount">200.00</td>
+                                        <td>2023-12-15</td>
+                                        <td>
+                                            <button class="btn btn-primary"
+                                                onclick="openDepositForm(this)">Deposit</button>
+                                            <button class="btn btn-secondary"
+                                                onclick="confirmDisable(this)">Disable</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deposit Form -->
+                <div id="depositForm" class="form-container">
+                    <div class="form-content">
+                        <h2 style="text-align: center;">Deposit Amount</h2>
+                        <form onsubmit="return validateForm()">
+                            <div class="two-column-form">
+                                <table class="form-table">
+                                    <tr>
+                                        <td>Marriage Bureau Name </td>
+                                        <td><input type="text" id="marriageBureauName" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Owner Name </td>
+                                        <td><input type="text" id="ownerName" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contact Number</td>
+                                        <td><input type="text" id="contactNo" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location </td>
+                                        <td><input type="text" id="location" readonly></td>
+                                    </tr>
+                                </table>
+                                <table class="form-table">
+                                    <tr>
+                                        <td>Overdue Amount </td>
+                                        <td><input type="text" id="overdueAmount" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Current Date </td>
+                                        <td><input type="text" id="currentDate" readonly></td>
+                                    </tr>
+                                    <tr>
+                                       
+                                        <td>Current Time </td>
+                                        <td>
+                                            <input type="text" id="currentTime">
+                                        <div id="error-message-currentTime" style="color: red;"></div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enter Deposit Amount <span style="color: red;">*</span></td>
+                                        <td>
+                                            <input type="text" id="depositAmount" step="0.01">
+                                            <div id="error-message-depositAmount" style="color: red;"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enter Transaction ID <span style="color: red;">*</span></td>
+                                        <td>
+                                            <input type="text" id="txnid">
+                                            <div id="error-message-txnid" style="color: red;"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary"
+                                    onclick="confirmDeposit()">Deposit</button>
+                                <button type="button" class="btn btn-secondary"
+                                    onclick="closeDepositForm()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </section>
+
+</body>
+</html>

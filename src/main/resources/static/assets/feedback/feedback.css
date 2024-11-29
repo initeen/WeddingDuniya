@@ -1,0 +1,10 @@
+/* tooltip*/
+.btn-view-sent-reply {
+    background-color: transparent;
+    border: none; /* Optional: Remove button border */
+}
+
+ /* Add custom CSS to reduce space between buttons */
+ .btn-reply {
+    margin-right: -20.0px; /* Adjust the margin to control spacing */
+}
