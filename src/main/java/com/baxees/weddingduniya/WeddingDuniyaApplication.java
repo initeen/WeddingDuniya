@@ -8,7 +8,7 @@ public class WeddingDuniyaApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(WeddingDuniyaApplication.class, args);
-		System.out.println("Project start..");
+		System.out.println("Project start....");
 		
 
 	}
